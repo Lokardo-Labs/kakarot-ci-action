@@ -1,0 +1,73 @@
+name: 'Kakarot CI'
+description: 'AI-powered unit test generation for pull requests'
+author: 'David Jansen / Lokardo Labs'
+branding:
+  icon: 'rocket'
+  color: 'green'
+
+inputs:
+  api-key:
+    description: 'LLM API key (OpenAI, Anthropic, or Google)'
+    required: true
+  github-token:
+    description: 'GitHub token for API access'
+    required: false
+    default: ${{ github.token }}
+  provider:
+    description: 'LLM provider (openai, anthropic, or google)'
+    required: false
+  model:
+    description: 'Model name'
+    required: false
+  framework:
+    description: 'Test framework (jest or vitest)'
+    required: false
+  max-tests-per-pr:
+    description: 'Maximum tests to generate per PR'
+    required: false
+  enable-auto-commit:
+    description: 'Enable auto-commit (true/false)'
+    required: false
+  commit-strategy:
+    description: 'Commit strategy (direct or branch-pr)'
+    required: false
+  enable-pr-comments:
+    description: 'Enable PR comments (true/false)'
+    required: false
+  debug:
+    description: 'Enable debug mode (true/false)'
+    required: false
+  test-directory:
+    description: 'Test directory path'
+    required: false
+  test-file-pattern:
+    description: 'Test file pattern'
+    required: false
+  max-fix-attempts:
+    description: 'Maximum fix attempts'
+    required: false
+  max-tokens:
+    description: 'Max tokens (1-100000)'
+    required: false
+  temperature:
+    description: 'Temperature (0-2)'
+    required: false
+  fix-temperature:
+    description: 'Fix temperature (0-2)'
+    required: false
+  test-location:
+    description: 'Test location (separate or co-located)'
+    required: false
+
+outputs:
+  tests-generated:
+    description: 'Number of tests generated'
+  tests-failed:
+    description: 'Number of tests that failed'
+  targets-processed:
+    description: 'Number of targets processed'
+
+runs:
+  using: 'node20'
+  main: 'index.js'
+
