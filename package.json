@@ -1,0 +1,36 @@
+{
+  "name": "kakarot-ci-action",
+  "version": "1.0.0",
+  "description": "GitHub Action wrapper for Kakarot CI - AI-powered unit test generation",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "release": "semantic-release"
+  },
+  "keywords": [
+    "github-action",
+    "testing",
+    "ai",
+    "test-generation",
+    "kakarot-ci"
+  ],
+  "author": "David Jansen / Lokardo Labs",
+  "license": "BUSL-1.1",
+  "dependencies": {
+    "@kakarot-ci/core": "^0.2.0",
+    "@actions/core": "^1.10.1",
+    "@actions/exec": "^1.1.1"
+  },
+  "devDependencies": {
+    "semantic-release": "^22.0.0",
+    "@semantic-release/commit-analyzer": "^11.1.0",
+    "@semantic-release/release-notes-generator": "^12.1.0",
+    "@semantic-release/changelog": "^6.0.3",
+    "@semantic-release/github": "^9.2.0",
+    "@semantic-release/git": "^10.0.1"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
+
