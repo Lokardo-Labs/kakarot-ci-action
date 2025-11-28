@@ -1,6 +1,6 @@
 {
   "name": "kakarot-ci-action",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "description": "GitHub Action wrapper for Kakarot CI - AI-powered unit test generation",
   "main": "index.js",
   "scripts": {
