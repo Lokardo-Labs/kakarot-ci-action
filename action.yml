@@ -2,7 +2,7 @@ name: 'Kakarot CI'
 description: 'AI-powered unit test generation for pull requests'
 author: 'David Jansen / Lokardo Labs'
 branding:
-  icon: 'rocket'
+  icon: 'activity'
   color: 'green'
 
 inputs:
