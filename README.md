@@ -32,7 +32,7 @@ jobs:
           node-version: '20'
       
       - name: Run Kakarot CI
-        uses: kakarot-ci/action@v1
+        uses: Lokardo-Labs/kakarot-ci-action@v0.4.0
         with:
           api-key: ${{ secrets.OPENAI_API_KEY }}
           framework: jest
@@ -63,7 +63,7 @@ jobs:
           node-version: '20'
       
       - name: Run Kakarot CI
-        uses: kakarot-ci/action@v1
+        uses: Lokardo-Labs/kakarot-ci-action@v0.4.0
         with:
           api-key: ${{ secrets.ANTHROPIC_API_KEY }}
           provider: anthropic
@@ -146,8 +146,9 @@ The action requires the following permissions:
 
 ## Requirements
 
-- Node.js >= 18.0.0
+- Node.js >= 18.0.0 (Node.js 20 recommended)
 - GitHub Actions runner with Node.js support
+- Internet access (for `npx` to download `@kakarot-ci/core`)
 
 ## Supported LLM Providers
 
@@ -157,9 +158,12 @@ The action requires the following permissions:
 
 ## Troubleshooting
 
-### Action fails with "CLI not found"
+### Action fails with "CLI not found" or module errors
 
-Ensure that `@kakarot-ci/core` is properly installed. The action installs it automatically, but if you encounter issues, check that the package is available on npm.
+The action uses `npx` to run the `kakarot-ci` CLI from `@kakarot-ci/core`. If you encounter module errors, ensure:
+- Node.js 18+ is set up in your workflow
+- The `@kakarot-ci/core` package is available on npm
+- Your workflow has internet access to download packages via `npx`
 
 ### Tests not being generated
 
