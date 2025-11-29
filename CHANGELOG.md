@@ -1,3 +1,11 @@
+## [0.3.2](https://github.com/Lokardo-Labs/kakarot-ci-action/compare/v0.3.1...v0.3.2) (2025-11-29)
+
+
+### Bug Fixes
+
+* **build:** I forgot to actually install and build :( ([#13](https://github.com/Lokardo-Labs/kakarot-ci-action/issues/13)) ([2c1c249](https://github.com/Lokardo-Labs/kakarot-ci-action/commit/2c1c249a4465f85b62e9f5cfeb8d329a6aacde0e))
+* **core:** Bumping core again ([#12](https://github.com/Lokardo-Labs/kakarot-ci-action/issues/12)) ([d1699b1](https://github.com/Lokardo-Labs/kakarot-ci-action/commit/d1699b1bc92ff8e87389edca11e2ef3a8eba44cc))
+
 ## [0.3.1](https://github.com/Lokardo-Labs/kakarot-ci-action/compare/v0.3.0...v0.3.1) (2025-11-29)
 
 
