@@ -35,8 +35,8 @@ jobs:
         uses: Lokardo-Labs/kakarot-ci-action@v0.4.0
         with:
           api-key: ${{ secrets.OPENAI_API_KEY }}
-          framework: jest
-          enable-auto-commit: true
+          provider: openai
+          model: gpt-4o
 ```
 
 ### Advanced Example
@@ -68,12 +68,6 @@ jobs:
           api-key: ${{ secrets.ANTHROPIC_API_KEY }}
           provider: anthropic
           model: claude-3-5-sonnet-20241022
-          framework: vitest
-          max-tests-per-pr: 30
-          enable-auto-commit: true
-          commit-strategy: branch-pr
-          enable-pr-comments: true
-          debug: true
 ```
 
 ## Inputs
@@ -91,19 +85,8 @@ jobs:
 | `github-token` | GitHub token for API access | `${{ github.token }}` | `${{ secrets.GITHUB_TOKEN }}` |
 | `provider` | LLM provider | Auto-detect | `openai`, `anthropic`, `google` |
 | `model` | Model name | Provider default | `gpt-4`, `claude-3-5-sonnet-20241022` |
-| `framework` | Test framework | Required if not in config | `jest`, `vitest` |
-| `max-tests-per-pr` | Maximum tests to generate per PR | `50` | `30` |
-| `enable-auto-commit` | Enable auto-commit of test files | `true` | `true`, `false` |
-| `commit-strategy` | Commit strategy | `direct` | `direct`, `branch-pr` |
-| `enable-pr-comments` | Enable PR comments | `true` | `true`, `false` |
-| `debug` | Enable debug mode | `false` | `true`, `false` |
-| `test-directory` | Test directory path | `__tests__` | `tests` |
-| `test-file-pattern` | Test file pattern | `*.test.ts` | `*.spec.ts` |
-| `max-fix-attempts` | Maximum fix attempts | `3` | `5` |
-| `max-tokens` | Max tokens (1-100000) | Provider default | `4000` |
-| `temperature` | Temperature (0-2) | Provider default | `0.7` |
-| `fix-temperature` | Fix temperature (0-2) | Provider default | `0.3` |
-| `test-location` | Test location | `separate` | `separate`, `co-located` |
+
+**Note:** Additional configuration options (framework, test directory, commit strategy, etc.) should be specified in a `kakarot.config.ts` file in your repository. See the [Configuration](#configuration) section below.
 
 ## Outputs
 
@@ -127,15 +110,21 @@ import { defineConfig } from '@kakarot-ci/core';
 
 export default defineConfig({
   apiKey: process.env.KAKAROT_API_KEY!,
-  framework: 'jest',
+  framework: 'vitest', // or 'jest'
   provider: 'openai',
-  model: 'gpt-4',
+  model: 'gpt-4o',
   maxTestsPerPR: 30,
   enableAutoCommit: true,
+  commitStrategy: 'direct', // or 'branch-pr'
+  enablePRComments: true,
   testDirectory: '__tests__',
   testFilePattern: '*.test.ts',
+  maxFixAttempts: 3,
+  debug: false,
 });
 ```
+
+**Important:** The `apiKey` in the config file will be overridden by the action's `api-key` input. The action sets `KAKAROT_API_KEY` environment variable from the input.
 
 ## Permissions
 
