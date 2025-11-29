@@ -1,3 +1,11 @@
+## [0.2.4](https://github.com/Lokardo-Labs/kakarot-ci-action/compare/v0.2.3...v0.2.4) (2025-11-29)
+
+
+### Bug Fixes
+
+* run kakarot-cli in-process and bundle correctly ([f223a42](https://github.com/Lokardo-Labs/kakarot-ci-action/commit/f223a4217a7024f34063acbbca80da4ae58df7b6))
+* run kakarot-cli in-process and bundle correctly ([#7](https://github.com/Lokardo-Labs/kakarot-ci-action/issues/7)) ([d68e8ea](https://github.com/Lokardo-Labs/kakarot-ci-action/commit/d68e8ea5f6e4c44c608a15e0611b29b43083d260))
+
 ## [0.2.3](https://github.com/Lokardo-Labs/kakarot-ci-action/compare/v0.2.2...v0.2.3) (2025-11-29)
 
 
