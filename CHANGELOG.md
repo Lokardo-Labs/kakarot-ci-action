@@ -1,3 +1,10 @@
+## [0.2.2](https://github.com/Lokardo-Labs/kakarot-ci-action/compare/v0.2.1...v0.2.2) (2025-11-29)
+
+
+### Bug Fixes
+
+* **build:** More build fix ([#5](https://github.com/Lokardo-Labs/kakarot-ci-action/issues/5)) ([8551def](https://github.com/Lokardo-Labs/kakarot-ci-action/commit/8551defb8736e34199a41ff24e6762559c01a9b0))
+
 ## [0.2.1](https://github.com/Lokardo-Labs/kakarot-ci-action/compare/v0.2.0...v0.2.1) (2025-11-29)
 
 
