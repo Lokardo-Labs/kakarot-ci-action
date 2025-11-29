@@ -1,3 +1,10 @@
+## [0.2.3](https://github.com/Lokardo-Labs/kakarot-ci-action/compare/v0.2.2...v0.2.3) (2025-11-29)
+
+
+### Bug Fixes
+
+* **CLI:** Update cli path ([#6](https://github.com/Lokardo-Labs/kakarot-ci-action/issues/6)) ([2398e71](https://github.com/Lokardo-Labs/kakarot-ci-action/commit/2398e719326d6c0d6cdf9eae194081bb9abfc8e9))
+
 ## [0.2.2](https://github.com/Lokardo-Labs/kakarot-ci-action/compare/v0.2.1...v0.2.2) (2025-11-29)
 
 
