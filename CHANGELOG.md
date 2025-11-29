@@ -1,3 +1,10 @@
+## [0.3.3](https://github.com/Lokardo-Labs/kakarot-ci-action/compare/v0.3.2...v0.3.3) (2025-11-29)
+
+
+### Bug Fixes
+
+* **core:** Adding more core fixes, this is why we are in a beta ([#14](https://github.com/Lokardo-Labs/kakarot-ci-action/issues/14)) ([2de13ca](https://github.com/Lokardo-Labs/kakarot-ci-action/commit/2de13ca84a12a569a661e2f8b79c10351d5e89be))
+
 ## [0.3.2](https://github.com/Lokardo-Labs/kakarot-ci-action/compare/v0.3.1...v0.3.2) (2025-11-29)
 
 
