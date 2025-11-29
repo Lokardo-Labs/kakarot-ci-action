@@ -1,3 +1,10 @@
+## [0.3.4](https://github.com/Lokardo-Labs/kakarot-ci-action/compare/v0.3.3...v0.3.4) (2025-11-29)
+
+
+### Bug Fixes
+
+* **core bump:** Not another core bump ([#15](https://github.com/Lokardo-Labs/kakarot-ci-action/issues/15)) ([4c2e488](https://github.com/Lokardo-Labs/kakarot-ci-action/commit/4c2e48855620739ead3f585e378692dc15b7c5ac))
+
 ## [0.3.3](https://github.com/Lokardo-Labs/kakarot-ci-action/compare/v0.3.2...v0.3.3) (2025-11-29)
 
 
