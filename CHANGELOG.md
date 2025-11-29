@@ -1,3 +1,10 @@
+## [0.2.6](https://github.com/Lokardo-Labs/kakarot-ci-action/compare/v0.2.5...v0.2.6) (2025-11-29)
+
+
+### Bug Fixes
+
+* **core:** Bumping core package to fix shebang duplicate issue ([#9](https://github.com/Lokardo-Labs/kakarot-ci-action/issues/9)) ([de61bf2](https://github.com/Lokardo-Labs/kakarot-ci-action/commit/de61bf28c1d1478de69f84e5b8c3999a7500e56a))
+
 ## [0.2.5](https://github.com/Lokardo-Labs/kakarot-ci-action/compare/v0.2.4...v0.2.5) (2025-11-29)
 
 
