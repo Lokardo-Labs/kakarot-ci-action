@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "ncc build index.js -o dist",
+    "build": "ncc build index.js -o dist && rm -f dist/package.json",
     "release": "semantic-release"
   },
   "keywords": [
@@ -28,7 +28,6 @@
     "@semantic-release/commit-analyzer": "^11.1.0",
     "@semantic-release/git": "^10.0.1",
     "@semantic-release/github": "^9.2.0",
-    "@semantic-release/git": "^10.0.1",
     "@semantic-release/exec": "^6.0.3",
     "@vercel/ncc": "^0.38.0",
     "@semantic-release/release-notes-generator": "^12.1.0",
