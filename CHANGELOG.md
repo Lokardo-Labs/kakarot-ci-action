@@ -1,3 +1,10 @@
+# [0.3.0](https://github.com/Lokardo-Labs/kakarot-ci-action/compare/v0.2.6...v0.3.0) (2025-11-29)
+
+
+### Features
+
+* **config:** Refactoring the config to line up better with core ([#10](https://github.com/Lokardo-Labs/kakarot-ci-action/issues/10)) ([3819faa](https://github.com/Lokardo-Labs/kakarot-ci-action/commit/3819faa9413ddb4d7389291c9dca407d8313877f))
+
 ## [0.2.6](https://github.com/Lokardo-Labs/kakarot-ci-action/compare/v0.2.5...v0.2.6) (2025-11-29)
 
 
