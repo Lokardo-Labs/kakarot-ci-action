@@ -91,25 +91,41 @@ async function run() {
 
     core.info(`Running kakarot-ci with args: ${args.join(' ')}`);
 
-    // Run the kakarot-ci CLI in-process instead of spawning a separate node process.
-    // This is required for the bundled GitHub Action, where @kakarot-ci/core is
-    // included inside the ncc bundle and not available as a separate CLI file.
+    // Execute the kakarot-ci CLI via npx so we don't depend on a local CLI file path.
+    // This avoids bundling issues and ensures the latest published CLI is used.
+    let exitCode = 0;
+    let output = '';
+    let errorOutput = '';
+
+    const options = {
+      listeners: {
+        stdout: (data) => {
+          output += data.toString();
+          core.info(data.toString().trim());
+        },
+        stderr: (data) => {
+          errorOutput += data.toString();
+          core.error(data.toString().trim());
+        }
+      }
+    };
+
     try {
-      // Simulate: node kakarot-ci ...args
-      process.argv = ['node', 'kakarot-ci', ...args];
-
-      // This require triggers the CLI's main entry point, which reads process.argv
-      // and process.env. ncc will bundle this module into dist/index.js.
-      // If the CLI throws, we'll catch it below and fail the action.
-      require('@kakarot-ci/core/dist/cli/index.js');
-
-      // Outputs: for now we don't have structured data, so set placeholders.
-      core.setOutput('tests-generated', '0');
-      core.setOutput('tests-failed', '0');
-      core.setOutput('targets-processed', '0');
+      // Use npx to run the kakarot-ci binary from the @kakarot-ci/core package.
+      exitCode = await exec.exec('npx', ['--yes', 'kakarot-ci', ...args], options);
     } catch (error) {
       core.setFailed(`kakarot-ci execution failed: ${error.message}`);
-      process.exit(1);
+      exitCode = 1;
+    }
+
+    // Outputs: for now we don't have structured data, so set placeholders.
+    core.setOutput('tests-generated', '0');
+    core.setOutput('tests-failed', '0');
+    core.setOutput('targets-processed', '0');
+
+    if (exitCode !== 0) {
+      core.setFailed(`kakarot-ci exited with code ${exitCode}`);
+      process.exit(exitCode);
     }
 
   } catch (error) {
