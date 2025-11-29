@@ -1,3 +1,10 @@
+## [0.2.5](https://github.com/Lokardo-Labs/kakarot-ci-action/compare/v0.2.4...v0.2.5) (2025-11-29)
+
+
+### Bug Fixes
+
+* **index:** Trying to fix the pathing issues once again in index ([#8](https://github.com/Lokardo-Labs/kakarot-ci-action/issues/8)) ([929c122](https://github.com/Lokardo-Labs/kakarot-ci-action/commit/929c122ef22aaa084540f23a1bf244326e1c6806))
+
 ## [0.2.4](https://github.com/Lokardo-Labs/kakarot-ci-action/compare/v0.2.3...v0.2.4) (2025-11-29)
 
 
