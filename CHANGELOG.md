@@ -1,3 +1,10 @@
+## [0.3.8](https://github.com/Lokardo-Labs/kakarot-ci-action/compare/v0.3.7...v0.3.8) (2026-01-03)
+
+
+### Bug Fixes
+
+* Making less restrictive license idc if someone wants to steal the action ([#20](https://github.com/Lokardo-Labs/kakarot-ci-action/issues/20)) ([2e1766d](https://github.com/Lokardo-Labs/kakarot-ci-action/commit/2e1766d98420fe3457815f2d4b75b013cdb562d7))
+
 ## [0.3.7](https://github.com/Lokardo-Labs/kakarot-ci-action/compare/v0.3.6...v0.3.7) (2025-11-30)
 
 
