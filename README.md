@@ -84,7 +84,7 @@ jobs:
 |-------|-------------|---------|---------|
 | `github-token` | GitHub token for API access | `${{ github.token }}` | `${{ secrets.GITHUB_TOKEN }}` |
 | `provider` | LLM provider | Auto-detect | `openai`, `anthropic`, `google` |
-| `model` | Model name | Provider default | `gpt-4`, `claude-3-5-sonnet-20241022` |
+| `model` | Model name | Provider default | `gpt-4o`, `claude-sonnet-4-20250514` |
 
 **Note:** Additional configuration options (framework, test directory, commit strategy, etc.) should be specified in a `kakarot.config.ts` file in your repository. See the [Configuration](#configuration) section below.
 
