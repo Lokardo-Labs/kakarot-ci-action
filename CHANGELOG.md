@@ -1,3 +1,10 @@
+## [0.3.9](https://github.com/Lokardo-Labs/kakarot-ci-action/compare/v0.3.8...v0.3.9) (2026-01-20)
+
+
+### Bug Fixes
+
+* Fixing dep ([#22](https://github.com/Lokardo-Labs/kakarot-ci-action/issues/22)) ([cc6df67](https://github.com/Lokardo-Labs/kakarot-ci-action/commit/cc6df67e83834f45e8fbe038a818e51b80260eb1))
+
 ## [0.3.8](https://github.com/Lokardo-Labs/kakarot-ci-action/compare/v0.3.7...v0.3.8) (2026-01-03)
 
 
