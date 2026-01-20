@@ -27642,7 +27642,7 @@ async function run() {
 
     try {
       // Use npx to run the kakarot-ci binary from the @kakarot-ci/core package
-      exitCode = await exec.exec('npx', ['--yes', 'kakarot-ci', ...args], options);
+      exitCode = await exec.exec('npx', ['--yes', '@kakarot-ci/core', ...args], options);
     } catch (error) {
       core.setFailed(`kakarot-ci execution failed: ${error.message}`);
       exitCode = 1;
