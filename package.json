@@ -16,7 +16,7 @@
     "kakarot-ci"
   ],
   "author": "David Jansen / Lokardo Labs",
-  "license": "BUSL-1.1",
+  "license": "SEE LICENSE IN LICENSE",
   "dependencies": {
     "@actions/core": "^1.10.1",
     "@actions/exec": "^1.1.1",
