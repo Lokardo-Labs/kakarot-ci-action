@@ -1,3 +1,10 @@
+## [0.3.10](https://github.com/Lokardo-Labs/kakarot-ci-action/compare/v0.3.9...v0.3.10) (2026-01-20)
+
+
+### Bug Fixes
+
+* Undo bad change ([#23](https://github.com/Lokardo-Labs/kakarot-ci-action/issues/23)) ([24e6148](https://github.com/Lokardo-Labs/kakarot-ci-action/commit/24e61481525f36a4e2a29a73307fa0ca1b0dfbe5))
+
 ## [0.3.9](https://github.com/Lokardo-Labs/kakarot-ci-action/compare/v0.3.8...v0.3.9) (2026-01-20)
 
 
